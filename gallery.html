@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery | Hustler Brothers Ltd.</title>
+
+    <style>
+        :root {
+            --black: #080808;
+            --dark: #151515;
+            --gold: #c9a44c;
+            --white: #ffffff;
+            --grey: #aaaaaa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--black);
+            color: var(--white);
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            padding: 25px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #292929;
+            gap: 15px;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .back-button {
+            color: var(--black);
+            background: var(--gold);
+            padding: 12px 22px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        .back-button:hover {
+            background: var(--white);
+        }
+
+        .gallery-heading {
+            text-align: center;
+            padding: 75px 20px 35px;
+        }
+
+        .gallery-heading h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .gallery-heading h1 span {
+            color: var(--gold);
+        }
+
+        .gallery-heading p {
+            color: var(--grey);
+            font-size: 16px;
+        }
+
+        .gold-line {
+            width: 75px;
+            height: 3px;
+            background: var(--gold);
+            margin: 20px auto;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 20px;
+        }
+
+        .filter-buttons button {
+            background: transparent;
+            color: var(--white);
+            border: 1px solid var(--gold);
+            padding: 11px 19px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .filter-buttons button:hover,
+        .filter-buttons button.active {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        .gallery {
+            max-width: 1400px;
+            margin: 30px auto 80px;
+            padding: 0 6%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .gallery-item {
+            background: var(--dark);
+            overflow: hidden;
+            border: 1px solid #292929;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item h3 {
+            color: var(--gold);
+            padding: 16px;
+            font-size: 17px;
+        }
+
+        .empty-message {
+            display: none;
+            text-align: center;
+            color: var(--grey);
+            padding: 40px 20px;
+            grid-column: 1 / -1;
+        }
+
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 25px;
+            color: var(--grey);
+            border-top: 1px solid #292929;
+            font-size: 14px;
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        @media (max-width: 900px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 20px 5%;
+            }
+
+            .logo {
+                font-size: 17px;
+            }
+
+            .back-button {
+                padding: 10px 13px;
+                font-size: 13px;
+            }
+
+            .gallery-heading {
+                padding-top: 55px;
+            }
+
+            .gallery-heading h1 {
+                font-size: 32px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                padding: 0 5%;
+            }
+
+            .gallery-item img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">HUSTLER BROTHERS LTD.</div>
+        <a href="index.html" class="back-button">← Back to Home</a>
+    </header>
+
+    <section class="gallery-heading">
+        <h1>OUR PROJECT <span>GALLERY</span></h1>
+        <div class="gold-line"></div>
+        <p>Quality craftsmanship. Beautiful results. Built to last.</p>
+    </section>
+
+    <div class="filter-buttons">
+        <button class="active" data-filter="all">All Projects</button>
+        <button data-filter="decks">Decks</button>
+        <button data-filter="fences">Fences</button>
+        <button data-filter="landscaping">Landscaping</button>
+        <button data-filter="doors">Custom Doors</button>
+        <button data-filter="interiors">Interior Renovations</button>
+    </div>
+
+    <section class="gallery">
+
+        <!-- DECK PROJECTS -->
+
+        <div class="gallery-item" data-category="decks">
+            <img src="images/deck1.jpeg" alt="Deck project 1">
+            <h3>Deck Construction</h3>
+        </div>
+
+        <div class="gallery-item" data-category="decks">
+            <img src="images/deck2.jpeg" alt="Deck project 2">
+            <h3>Custom Deck</h3>
+        </div>
+
+        <div class="gallery-item" data-category="decks">
+            <img src="images/deck3.jpeg" alt="Deck project 3">
+            <h3>Outdoor Living Space</h3>
+        </div>
+
+        <div class="gallery-item" data-category="decks">
+            <img src="images/deck4.jpeg" alt="Deck project 4">
+            <h3>Deck Renovation</h3>
+        </div>
+
+        <div class="gallery-item" data-category="decks">
+            <img src="images/deck5.jpeg" alt="Deck project 5">
+            <h3>Residential Deck</h3>
+        </div>
+
+        <div class="gallery-item" data-category="decks">
+            <img src="images/deck6.jpeg" alt="Deck project 6">
+            <h3>Custom Outdoor Deck</h3>
+        </div>
+
+        <div class="gallery-item" data-category="decks">
+            <img src="images/deck7.jpeg" alt="Deck project 7">
+            <h3>Deck Project</h3>
+        </div>
+
+        <div class="gallery-item" data-category="decks">
+            <img src="images/deck9.jpeg" alt="Deck project 9">
+            <h3>Deck Project</h3>
+        </div>
+
+        <div class="gallery-item" data-category="decks">
+            <img src="images/deck10.jpeg" alt="Deck project 10">
+            <h3>Deck Project</h3>
+        </div>
+
+        <div class="gallery-item" data-category="decks">
+            <img src="images/deck11.jpeg" alt="Deck project 11">
+            <h3>Deck Project</h3>
+        </div>
+
+        <div class="gallery-item" data-category="decks">
+            <img src="images/deck12.jpeg" alt="Deck project 12">
+            <h3>Deck Project</h3>
+        </div>
+
+        <p class="empty-message">More project photos coming soon.</p>
+
+    </section>
+
+    <footer>
+        © 2026 <span>Hustler Brothers Ltd.</span> | Edmonton and surrounding areas
+    </footer>
+
+    <script>
+        const filterButtons = document.querySelectorAll(".filter-buttons button");
+        const galleryItems = document.querySelectorAll(".gallery-item");
+        const emptyMessage = document.querySelector(".empty-message");
+
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+
+                filterButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+
+                const filter = button.dataset.filter;
+                let visibleCount = 0;
+
+                galleryItems.forEach(item => {
+                    const show = filter === "all" ||
+                                 item.dataset.category === filter;
+
+                    item.style.display = show ? "block" : "none";
+
+                    if (show) visibleCount++;
+                });
+
+                emptyMessage.style.display =
+                    visibleCount === 0 ? "block" : "none";
+            });
+        });
+    </script>
+
+</body>
+</html>
