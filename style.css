@@ -506,3 +506,37 @@ h2 span,
         bottom: 15px;
     }
 }
+/* RESPONSIVE ABOUT VIDEO */
+
+.about-video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .about-video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .about-section,
+    .about-container,
+    .about-image {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
