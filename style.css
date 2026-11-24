@@ -521,10 +521,11 @@ h2 span,
     box-sizing: border-box;
 }
 }
+/* White background behind company logo on mobile only */
 @media (max-width: 768px) {
     .logo img {
-        background: #ffffff !important;
+        background-color: #ffffff;
         padding: 6px;
-        border-radius: 6px;
+        border-radius: 5px;
     }
 }
