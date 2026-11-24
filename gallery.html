@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Project Gallery | Hustler Brothers Ltd.</title>
+    <meta name="description" content="Explore deck construction, fencing, landscaping and custom door projects by Hustler Brothers Ltd. in Edmonton.">
 
     <style>
         :root {
@@ -28,51 +30,44 @@
         }
 
         header {
-            padding: 25px 7%;
+            padding: 22px 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #292929;
-            gap: 15px;
         }
 
         .logo {
             color: var(--gold);
-            font-size: 22px;
+            font-size: 21px;
             font-weight: bold;
             letter-spacing: 1px;
         }
 
         .back-button {
-            color: var(--black);
             background: var(--gold);
+            color: var(--black);
             padding: 12px 22px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 3px;
-        }
-
-        .back-button:hover {
-            background: var(--white);
         }
 
         .gallery-heading {
             text-align: center;
-            padding: 75px 20px 35px;
+            padding: 70px 20px 30px;
         }
 
         .gallery-heading h1 {
-            font-size: 42px;
+            font-size: 40px;
             margin-bottom: 15px;
         }
 
-        .gallery-heading h1 span {
+        .gallery-heading span {
             color: var(--gold);
         }
 
         .gallery-heading p {
             color: var(--grey);
-            font-size: 16px;
         }
 
         .gold-line {
@@ -92,11 +87,10 @@
 
         .filter-buttons button {
             background: transparent;
-            color: var(--white);
+            color: white;
             border: 1px solid var(--gold);
-            padding: 11px 19px;
+            padding: 12px 19px;
             cursor: pointer;
-            font-size: 14px;
             transition: 0.3s;
         }
 
@@ -117,13 +111,13 @@
 
         .gallery-item {
             background: var(--dark);
-            overflow: hidden;
             border: 1px solid #292929;
+            overflow: hidden;
         }
 
         .gallery-item img {
             width: 100%;
-            height: 280px;
+            height: 270px;
             object-fit: cover;
             display: block;
             transition: transform 0.4s;
@@ -136,14 +130,14 @@
         .gallery-item h3 {
             color: var(--gold);
             padding: 16px;
-            font-size: 17px;
+            font-size: 16px;
         }
 
         .empty-message {
             display: none;
-            text-align: center;
             color: var(--grey);
-            padding: 40px 20px;
+            text-align: center;
+            padding: 40px;
             grid-column: 1 / -1;
         }
 
@@ -153,7 +147,6 @@
             padding: 25px;
             color: var(--grey);
             border-top: 1px solid #292929;
-            font-size: 14px;
         }
 
         footer span {
@@ -168,24 +161,20 @@
 
         @media (max-width: 600px) {
             header {
-                padding: 20px 5%;
+                padding: 18px 5%;
             }
 
             .logo {
-                font-size: 17px;
+                font-size: 15px;
             }
 
             .back-button {
-                padding: 10px 13px;
-                font-size: 13px;
-            }
-
-            .gallery-heading {
-                padding-top: 55px;
+                padding: 10px;
+                font-size: 12px;
             }
 
             .gallery-heading h1 {
-                font-size: 32px;
+                font-size: 30px;
             }
 
             .gallery {
@@ -202,121 +191,222 @@
 
 <body>
 
-    <header>
-        <div class="logo">HUSTLER BROTHERS LTD.</div>
-        <a href="index.html" class="back-button">← Back to Home</a>
-    </header>
+<header>
+    <div class="logo">HUSTLER BROTHERS LTD.</div>
+    <a href="index.html" class="back-button">← Back to Home</a>
+</header>
 
-    <section class="gallery-heading">
-        <h1>OUR PROJECT <span>GALLERY</span></h1>
-        <div class="gold-line"></div>
-        <p>Quality craftsmanship. Beautiful results. Built to last.</p>
-    </section>
+<section class="gallery-heading">
+    <h1>OUR PROJECT <span>GALLERY</span></h1>
+    <div class="gold-line"></div>
+    <p>Quality craftsmanship. Beautiful results. Built to last.</p>
+</section>
 
-    <div class="filter-buttons">
-        <button class="active" data-filter="all">All Projects</button>
-        <button data-filter="decks">Decks</button>
-        <button data-filter="fences">Fences</button>
-        <button data-filter="landscaping">Landscaping</button>
-        <button data-filter="doors">Custom Doors</button>
-        <button data-filter="interiors">Interior Renovations</button>
+<div class="filter-buttons">
+    <button class="active" data-filter="all">All Projects</button>
+    <button data-filter="decks">Decks</button>
+    <button data-filter="fences">Fences</button>
+    <button data-filter="landscaping">Landscaping</button>
+    <button data-filter="doors">Custom Doors</button>
+    <button data-filter="interiors">Interior Renovations</button>
+</div>
+
+<section class="gallery">
+
+    <!-- DECK PROJECTS -->
+
+    <div class="gallery-item" data-category="decks">
+        <img src="images/deck1.jpeg" alt="Deck project 1">
+        <h3>Custom Deck</h3>
     </div>
 
-    <section class="gallery">
+    <div class="gallery-item" data-category="decks">
+        <img src="images/deck2.jpeg" alt="Deck project 2">
+        <h3>Outdoor Deck</h3>
+    </div>
 
-        <!-- DECK PROJECTS -->
+    <div class="gallery-item" data-category="decks">
+        <img src="images/deck3.jpeg" alt="Deck project 3">
+        <h3>Custom Deck</h3>
+    </div>
 
-        <div class="gallery-item" data-category="decks">
-            <img src="images/deck1.jpeg" alt="Deck project 1">
-            <h3>Deck Construction</h3>
-        </div>
+    <div class="gallery-item" data-category="decks">
+        <img src="images/deck4.jpeg" alt="Deck project 4">
+        <h3>Deck Project</h3>
+    </div>
 
-        <div class="gallery-item" data-category="decks">
-            <img src="images/deck2.jpeg" alt="Deck project 2">
-            <h3>Custom Deck</h3>
-        </div>
+    <div class="gallery-item" data-category="decks">
+        <img src="images/deck5.jpeg" alt="Deck project 5">
+        <h3>Deck Construction</h3>
+    </div>
 
-        <div class="gallery-item" data-category="decks">
-            <img src="images/deck3.jpeg" alt="Deck project 3">
-            <h3>Outdoor Living Space</h3>
-        </div>
+    <div class="gallery-item" data-category="decks">
+        <img src="images/deck6.jpeg" alt="Deck project 6">
+        <h3>Custom Deck</h3>
+    </div>
 
-        <div class="gallery-item" data-category="decks">
-            <img src="images/deck4.jpeg" alt="Deck project 4">
-            <h3>Deck Renovation</h3>
-        </div>
+    <div class="gallery-item" data-category="decks">
+        <img src="images/deck7.jpeg" alt="Deck project 7">
+        <h3>Deck Project</h3>
+    </div>
 
-        <div class="gallery-item" data-category="decks">
-            <img src="images/deck5.jpeg" alt="Deck project 5">
-            <h3>Residential Deck</h3>
-        </div>
+    <div class="gallery-item" data-category="decks">
+        <img src="images/deck9.jpeg" alt="Deck project 9">
+        <h3>Deck Construction</h3>
+    </div>
 
-        <div class="gallery-item" data-category="decks">
-            <img src="images/deck6.jpeg" alt="Deck project 6">
-            <h3>Custom Outdoor Deck</h3>
-        </div>
+    <div class="gallery-item" data-category="decks">
+        <img src="images/deck10.jpeg" alt="Deck project 10">
+        <h3>Custom Deck</h3>
+    </div>
 
-        <div class="gallery-item" data-category="decks">
-            <img src="images/deck7.jpeg" alt="Deck project 7">
-            <h3>Deck Project</h3>
-        </div>
+    <div class="gallery-item" data-category="decks">
+        <img src="images/deck11.jpeg" alt="Deck project 11">
+        <h3>Deck Project</h3>
+    </div>
 
-        <div class="gallery-item" data-category="decks">
-            <img src="images/deck9.jpeg" alt="Deck project 9">
-            <h3>Deck Project</h3>
-        </div>
+    <div class="gallery-item" data-category="decks">
+        <img src="images/deck12.jpeg" alt="Deck project 12">
+        <h3>Outdoor Deck</h3>
+    </div>
 
-        <div class="gallery-item" data-category="decks">
-            <img src="images/deck10.jpeg" alt="Deck project 10">
-            <h3>Deck Project</h3>
-        </div>
 
-        <div class="gallery-item" data-category="decks">
-            <img src="images/deck11.jpeg" alt="Deck project 11">
-            <h3>Deck Project</h3>
-        </div>
+    <!-- FENCE PROJECTS -->
 
-        <div class="gallery-item" data-category="decks">
-            <img src="images/deck12.jpeg" alt="Deck project 12">
-            <h3>Deck Project</h3>
-        </div>
+    <div class="gallery-item" data-category="fences">
+        <img src="images/fence1.jpeg" alt="Fence project 1">
+        <h3>Fence Construction</h3>
+    </div>
 
-        <p class="empty-message">More project photos coming soon.</p>
+    <div class="gallery-item" data-category="fences">
+        <img src="images/fence2.jpeg" alt="Fence project 2">
+        <h3>Custom Fence</h3>
+    </div>
 
-    </section>
+    <div class="gallery-item" data-category="fences">
+        <img src="images/fence5.jpeg" alt="Fence project 5">
+        <h3>Fence Installation</h3>
+    </div>
 
-    <footer>
-        © 2026 <span>Hustler Brothers Ltd.</span> | Edmonton and surrounding areas
-    </footer>
+    <div class="gallery-item" data-category="fences">
+        <img src="images/fence6.jpeg" alt="Fence project 6">
+        <h3>Fence Construction</h3>
+    </div>
 
-    <script>
-        const filterButtons = document.querySelectorAll(".filter-buttons button");
-        const galleryItems = document.querySelectorAll(".gallery-item");
-        const emptyMessage = document.querySelector(".empty-message");
+    <div class="gallery-item" data-category="fences">
+        <img src="images/fence7.jpeg" alt="Fence project 7">
+        <h3>Custom Fence</h3>
+    </div>
 
-        filterButtons.forEach(button => {
-            button.addEventListener("click", () => {
 
-                filterButtons.forEach(btn => btn.classList.remove("active"));
-                button.classList.add("active");
+    <!-- LANDSCAPING PROJECTS -->
 
-                const filter = button.dataset.filter;
-                let visibleCount = 0;
+    <div class="gallery-item" data-category="landscaping">
+        <img src="images/landscaping1.jpeg" alt="Landscaping project 1">
+        <h3>Landscaping</h3>
+    </div>
 
-                galleryItems.forEach(item => {
-                    const show = filter === "all" ||
-                                 item.dataset.category === filter;
+    <div class="gallery-item" data-category="landscaping">
+        <img src="images/landscaping2.jpeg" alt="Landscaping project 2">
+        <h3>Landscape Design</h3>
+    </div>
 
-                    item.style.display = show ? "block" : "none";
+    <div class="gallery-item" data-category="landscaping">
+        <img src="images/landscaping3.jpeg" alt="Landscaping project 3">
+        <h3>Landscaping Project</h3>
+    </div>
 
-                    if (show) visibleCount++;
-                });
+    <div class="gallery-item" data-category="landscaping">
+        <img src="images/landscaping4.jpeg" alt="Landscaping project 4">
+        <h3>Outdoor Design</h3>
+    </div>
 
-                emptyMessage.style.display =
-                    visibleCount === 0 ? "block" : "none";
+    <div class="gallery-item" data-category="landscaping">
+        <img src="images/landscaping5.jpeg" alt="Landscaping project 5">
+        <h3>Landscape Development</h3>
+    </div>
+
+    <div class="gallery-item" data-category="landscaping">
+        <img src="images/landscaping7.jpeg" alt="Landscaping project 7">
+        <h3>Landscaping</h3>
+    </div>
+
+
+    <!-- CUSTOM DOOR PROJECTS -->
+
+    <div class="gallery-item" data-category="doors">
+        <img src="images/door1.jpeg" alt="Custom door project 1">
+        <h3>Custom Doors</h3>
+    </div>
+
+    <div class="gallery-item" data-category="doors">
+        <img src="images/door2.jpeg" alt="Custom door project 2">
+        <h3>Door Installation</h3>
+    </div>
+
+    <div class="gallery-item" data-category="doors">
+        <img src="images/door3.jpeg" alt="Custom door project 3">
+        <h3>Custom Door Project</h3>
+    </div>
+
+    <div class="gallery-item" data-category="doors">
+        <img src="images/door4.jpeg" alt="Custom door project 4">
+        <h3>Door Design</h3>
+    </div>
+
+    <div class="gallery-item" data-category="doors">
+        <img src="images/door5.jpeg" alt="Custom door project 5">
+        <h3>Custom Doors</h3>
+    </div>
+
+    <div class="gallery-item" data-category="doors">
+        <img src="images/door6.jpeg" alt="Custom door project 6">
+        <h3>Door Installation</h3>
+    </div>
+
+    <div class="gallery-item" data-category="doors">
+        <img src="images/door9.jpeg" alt="Custom door project 9">
+        <h3>Custom Door</h3>
+    </div>
+
+    <p class="empty-message">More project photos coming soon.</p>
+
+</section>
+
+<footer>
+    © 2026 <span>Hustler Brothers Ltd.</span> |
+    Edmonton and surrounding areas
+</footer>
+
+<script>
+    const buttons = document.querySelectorAll(".filter-buttons button");
+    const items = document.querySelectorAll(".gallery-item");
+    const emptyMessage = document.querySelector(".empty-message");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+
+            buttons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            const filter = button.dataset.filter;
+            let count = 0;
+
+            items.forEach(item => {
+                const show =
+                    filter === "all" ||
+                    item.dataset.category === filter;
+
+                item.style.display = show ? "block" : "none";
+
+                if (show) count++;
             });
+
+            emptyMessage.style.display =
+                count === 0 ? "block" : "none";
         });
-    </script>
+    });
+</script>
 
 </body>
 </html>
